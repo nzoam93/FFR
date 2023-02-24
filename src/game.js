@@ -20,7 +20,11 @@ export default class Game{
         this.gameSpeed = 60; //determines how many times a second the game runs
         this.paused = false;
         this.timedLoop; //used by game loop
-        this.arrow = new Arrow(this.canvas.width * 1/10,0,0,3, this.canvas.width * 1/8, this.canvas.width * 1/8, this.ctx);
+        this.leftArrow = new Arrow(this.canvas.width * 1/10,0,0,3, this.canvas.width * 1/8, this.canvas.width * 1/8, this.ctx);
+        // this.upArrow = new Arrow(this.canvas.width * 1/10 + this.canvas.width * 1/8, 0,0,3, this.canvas.width * 1/8, this.canvas.width * 1/8, this.ctx);
+        // this.downArrow = new Arrow(this.canvas.width * 1/10,0,0,3, this.canvas.width * 1/8, this.canvas.width * 1/8, this.ctx);
+        // this.rightArrow = new Arrow(this.canvas.width * 1/10,0,0,3, this.canvas.width * 1/8, this.canvas.width * 1/8, this.ctx);
+
     }
 
     startGame(){
@@ -46,6 +50,8 @@ export default class Game{
         //clear the screen and draws the background
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.drawImage(this.canvasBackground,0,0);
+
+        //draw the arrows on the bottom
         let arrowWidth = this.canvas.width * 1/8
         this.ctx.drawImage(leftArrow, this.canvas.width * 1/10, this.canvas.height - arrowWidth, arrowWidth - 5, arrowWidth)
         this.ctx.drawImage(upArrow, this.canvas.width * 2/10 + arrowWidth, this.canvas.height - arrowWidth - 5, arrowWidth, arrowWidth)
@@ -53,6 +59,6 @@ export default class Game{
         this.ctx.drawImage(rightArrow, this.canvas.width * 4/10 + 3 * arrowWidth, this.canvas.height - arrowWidth - 5, arrowWidth, arrowWidth)
 
         //move the arrows
-        this.arrow.draw(this.ctx);
+        this.leftArrow.draw(this.ctx);
     }
 }
