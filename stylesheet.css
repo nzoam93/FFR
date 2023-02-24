@@ -1,16 +1,55 @@
 body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     justify-content: center;
     background-color: lightskyblue;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    margin-left: 100px;
+    margin-right: 0px;
+}
+
+#github img{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 12px;
+}
+
+#linkedIn img{
+    width: 70px;
+    height: 70px;
+}
+
+#game{
+    border: 1px solid black;
+
+    background: linear-gradient(45deg, rgb(92, 92, 208), rgb(198, 51, 51));
 }
 
 #game-container{
     background-color: lightseagreen;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    justify-content: space-between;
     width: 500px;
     height: 700px;
     border: 1px solid black;
+}
+
+#start-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 #bottom-arrows-container{
@@ -26,4 +65,3 @@ body{
     font-size: 80px;
     border: 1px solid red;
 }
-

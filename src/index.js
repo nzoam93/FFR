@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("game");
+    canvas.width = 500;
+    canvas.height = 700;
+    // const canvasBackground = new Image();
+    // canvasBackground.src = './imgs/background.png'
+    const ctx = canvas.getContext("2d");
+
+
+
+
     // const moveObject = (object, xStep, yStep) => {
     //     let div = document.getElementById(object);
     //     let rect = div.getBoundingClientRect();
@@ -18,5 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 
     // let timedLoop = setInterval(constantMovement, 1000)
-    document.getElementById("game-container").style.left="300px"
+    // let startButton = document.getElementById("start-button")
+    // startButton.style.left="10px"
+    // console.log(startButton.style.left)
 })

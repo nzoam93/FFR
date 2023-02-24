@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="./src/index.js" type="module" defer></script> <!--type="module" is a workaround for webpack-->
     <title>FFR</title>
     <script src="https://kit.fontawesome.com/2687a23fd5.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <link rel="icon" type="image/x-icon" href="./imgs/coin.ico"> adds an image to the browser -->
 </head>
 <body>
-    <div id="game-container">
-        <button id ="startButton" onclick="newGame()"> Start Game</button>
-        <!-- <div>FFR</div> -->
+    <header>
+        <h1>JS JS Revolution</h1>
+        <nav>
+            <a id="github" href="https://github.com/nzoam93"><img src="./imgs/github.png" alt="gitHub photo"></a>
+            <a id="linkedIn" href="https://www.linkedin.com/in/noam-zimet-4114a594"><img src="./imgs/linkedIn2.png" alt="linkedIn"></a>
+        </nav>
+    </header>
+
+    <canvas id="game">
+        <div id="bottom-part">
+            
+        </div>
+    </canvas>
+
+    <!-- <div id="game-container">
+        <button id ="start-button" onclick="newGame()"> Start Game</button>
         <div id="game-arrows-container">
             <div><i id="top-arrow" class="arrow fa-sharp fa-solid fa-arrow-left"></i></div>
         </div>
@@ -22,6 +36,6 @@
             <div><i class="arrow fa-sharp fa-solid fa-arrow-up"></i></div>
             <div><i class="arrow fa-sharp fa-solid fa-arrow-right"></i></div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
