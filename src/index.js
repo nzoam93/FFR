@@ -1,12 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
+import Game from "./game.js";
+
     const canvas = document.getElementById("game");
     canvas.width = 500;
-    canvas.height = 700;
-    // const canvasBackground = new Image();
-    // canvasBackground.src = './imgs/background.png'
+    canvas.height = 550;
+    const canvasBackground = new Image();
+    canvasBackground.src = './imgs/background.png';
     const ctx = canvas.getContext("2d");
 
 
+    const currentGame = new Game(canvas, ctx, canvasBackground);
+
+    const playButton = document.getElementById("playButton");
+    playButton.addEventListener("click", ()=>{
+        //starts the game
+        currentGame.startGame();
+    })
+
+    const pauseButton = document.getElementById("pauseButton");
+    pauseButton.addEventListener("click", ()=>{
+        //pauses the game
+        currentGame.pauseGame();
+    })
 
 
     // const moveObject = (object, xStep, yStep) => {
@@ -31,4 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // let startButton = document.getElementById("start-button")
     // startButton.style.left="10px"
     // console.log(startButton.style.left)
-})
